@@ -13,13 +13,13 @@ I wrote this program for my job at Behavox. It will be used to train and test ou
 
 ## Specifications
 Each page is represented in one row of the sheet. Columns:
-1 - id (which email out of the 44503 is it)
-2 - From:
-3 - To:
-4 - CC (when available) (if not, subtract 1 from each column number below)
-5- Date
-6 - Subject
-7 - Content
+1. ID (which email out of the 44503 is it)
+2. From
+3. To
+4. CC (when available) (if not, subtract 1 from each column number below)
+5. Date
+6. Subject
+7. Content
 
 For my purposes, I wanted all of the raw data in my spreadsheet. I am manipulating the formatting and cleaning the data itself later. If you don't have a need for recording the raw data, it would be smart to incorporate methods for cleaning the content before you place it in your sheet.
 
