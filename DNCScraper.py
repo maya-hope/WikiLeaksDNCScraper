@@ -72,10 +72,10 @@ def run():
     for i in range(START,FINISH+1):
         j=str(i)
         try:
-            gotoemailpage(driver,j)
-            writeincsv(path1,formatcontent(getcontent(driver),i))
+			gotoemailpage(driver,j)
+			writeincsv(path1,formatcontent(getcontent(driver),i))
         except:
-            #whatever you want here, just want it to keep going
+			#whatever you want here, just want it to keep going
 			print(i)
 
     driver.quit()    
