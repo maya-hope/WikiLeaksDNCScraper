@@ -21,4 +21,5 @@ Notes:
 2. It would be more efficient to run multiple scrapers on your computer in parallel, running on different ranges of id's. I needed to keep using my computer at work while this was running in the background, and running more than 1 scaper at a time slowed down my computer too much, so I ruled it out. 
 To learn how to run multiple scrapers at a time, check out this site: 
 https://saucelabs.com/blog/running-your-selenium-tests-in-parallel-python
+3. I have a few exception catchers in my script to make sure it doesn't get stuck on the few "empty" emails in the DNC archive. These are essentially empty emails with no content. They are irrelevant to me, so I just skip past those with a simple try: except: in a couple of areas. 
 
