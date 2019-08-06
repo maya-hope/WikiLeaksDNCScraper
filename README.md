@@ -10,7 +10,7 @@ Each page is represented in one row of the sheet. Columns:
 1 - id (which email out of the 44503 is it)
 2 - From:
 3 - To:
-4 - CC (when available)
+4 - CC (when available) (if not, subtract 1 from each column number below)
 5- Date
 6 - Subject
 7 - Content
