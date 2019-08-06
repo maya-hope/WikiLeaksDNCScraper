@@ -38,7 +38,7 @@ def formatcontent(text,i):
 			betterHTML = aftersub[1]
 			b=html.unescape(betterHTML)
 			b=b.replace("\n"," ")
-        else:
+		else:
 			aftersub=text.split(splitted[4])
 			betterHTML = aftersub[1]
 			b=html.unescape(betterHTML)
@@ -55,8 +55,8 @@ def writeincsv(path,line):
 		with open(path, mode='a') as dnc_file:
 			dnc_writer = csv.writer(dnc_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 			dnc_writer.writerow(line)
-    except:
-        return
+	except:
+        	return
 				
 def run():
 	#THIS IS THE PART WHERE YOU DEFINE THE PATHS TO THE CSVs YOU'RE WRITING IN. 
@@ -65,20 +65,20 @@ def run():
 	path20='/Users/YOU/DIRECTORY/FILENAME20.csv'
 	
 	#usual path to chromedriver (i think): /usr/local/bin/chromedriver
-    driver=webdriver.Chrome('/PATH/TO/YOUR/chromedriver')
+	driver=webdriver.Chrome('/PATH/TO/YOUR/chromedriver')
     
-    #number of these loops depends on how many csv's you're writing to/whether you're running multiple processes at once
+	#number of these loops depends on how many csv's you're writing to/whether you're running multiple processes at once
 	#this is just the basic premise of the loop to read and write the page content to your csv
-    for i in range(START,FINISH+1):
-        j=str(i)
-        try:
+	for i in range(START,FINISH+1):
+		j=str(i)
+		try:
 			gotoemailpage(driver,j)
 			writeincsv(path1,formatcontent(getcontent(driver),i))
-        except:
+		except:
 			#whatever you want here, just want it to keep going
 			print(i)
 
-    driver.quit()    
+	driver.quit()    
 
 #run the damn thing!
 run()
